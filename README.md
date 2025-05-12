@@ -35,3 +35,7 @@ or if you wish to use the statistics provided as `graph.diameter` and `graph.cyc
 ```python
 _3r2r(target="None")
 ```
+
+## Graph Creation
+
+Data/raw/*.graphml already contains the precreated datasets for reproducibility. However, if you wish to recreate of modify them, then the CCoHG_3r2r_generation.ipynb provides all the code to do so.
