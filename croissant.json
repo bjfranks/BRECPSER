@@ -1,0 +1,129 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "name": "Realized Expressivity Graph Datasets Focused on Positional and Structural Encodings and Rewiring",
+  "description": "Message-passing neural networks (MPNNs) are central to machine learning on graphs, but their limited expressivity constrains their ability to capture complex graph structures. To enhance MPNN expressivity, practitioners often employ positional and structural encodings and rewiring methods---collectively referred to here as graph transformations (GTs). However, the expressivity of GTs remains poorly understood, in part due to difficulty analyzing them with the Weisfeiler-Leman hierarchy. Moreover, there is a substantial gap between the expressivity that models achieve in theory and what they realize in practice---a discrepancy to which GTs significantly contribute due to their opaque influence on information propagation. This dataset addresses this gap. We extend the BREC benchmark suite [Wang and Zhang, 2024] with novel datasets tailored to GTs, and introduce a modified loss function for fair evaluation. We use the benchmark to systematically evaluate popular GTs, revealing distinct strengths and trade-offs that inform future model design.",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "citeAs": "@unpublished{anonymous2025brec,title={BREC$_{\text{PSE+R}}$: An Expressivity Benchmark for Graph Positional Encodings and Rewiring},author={Anonymous},booktitle = {Advances in Neural Information Processing Systems},year={2025},note={anonymous preprint under review}}",
+  "url": "https://anonymous.4open.science/r/BRECPSER-2D3C",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "github-repository",
+      "name": "github-repository",
+      "description": "Anonymous repository on GitHub.",
+      "contentUrl": "https://anonymous.4open.science/r/BRECPSER-2D3C",
+      "encodingFormat": "git+https",
+      "sha256": "main"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "CCOHG_BREC_file",
+      "name": "CCOHG_BREC",
+      "description": "A pickle-serialized file containing the CCoHG BREC graphs as GraphML files.",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "application/x-python-pickle",
+      "includes": "Data/raw/CCoHG_BREC.graphml"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "3r2r_BREC_file",
+      "name": "3r2r_BREC",
+      "description": "A pickle-serialized file containing the 3r2r BREC graphs as GraphML files.",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "application/x-python-pickle",
+      "includes": "Data/raw/3reg2reg.graphml"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "CCoHG_Standard_file",
+      "name": "CCoHG_Standard",
+      "description": "A pickle-serialized file containing the Standard dataset CCoHG graphs as GraphML files.",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "application/x-python-pickle",
+      "includes": "Data/raw/CCoHG.graphml"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "3r2r_Standard_file",
+      "name": "3r2r_Standard",
+      "description": "A pickle-serialized file containing the Standard dataset 3r2r graphs as GraphML files.",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": "application/x-python-pickle",
+      "includes": "Data/raw/3reg2reg.graphml"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "repository-assets",
+      "name": "Repository Code and Documentation",
+      "description": "This includes Python scripts, a Jupyter notebook, a README file, and a LICENSE file to support reproducibility, understanding, and proper licensing of the dataset.",
+      "containedIn": {
+        "@id": "github-repository"
+      },
+      "encodingFormat": [
+        "text/x-python",
+        "application/x-ipynb+json",
+        "text/markdown",
+        "text/plain"
+      ],
+      "includes": [
+        "*.py",
+        "*.ipynb",
+        "README.md",
+        "LICENSE"
+      ]
+    }
+  ]
+}
