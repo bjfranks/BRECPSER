@@ -5,8 +5,7 @@ import BRECDataset_v4
 torch_geometric.seed_everything(2022)
 
 
-# This construction is due to the added graphs having varying amounts of node features. Originals have 0, CCoHG has 1,
-# Peptides has multiple.
+# This construction is due to the added graphs having varying amounts of node features. Originals have 0, CCoHG has 1.
 class BRECDataset(InMemoryDataset):
     def __init__(
         self,

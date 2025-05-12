@@ -261,13 +261,12 @@ def get_model(args, num_nodes, num_features, device):
                 x = x.mean(dim=0)
                 if graph_classification:
                     x = global_add_pool(x, batch)
-                x = self.fcs[i](x)  # No dropout layer in these experiments
+                x = self.fcs[i](x)
                 if out is None:
                     out = x
                 else:
                     out += x
             return out
-            # return F.log_softmax(out, dim=-1), 0
 
     model = GIN().to(device)
 
