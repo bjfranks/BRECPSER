@@ -24,7 +24,7 @@ python test_BREC.py
 
 ## Standard Datasets
 
-Use the datasets provided in CCoHG.py and 3r2r.py which are in standard PyTorch Geometric format. The 3r2r dataset has an option to toggle the used target by calling
+Use the datasets provided in CCoHG.py and 3r2r.py which are in standard PyTorch Geometric format. The 3r2r dataset has an option to toggle the used target, default diameter, by calling
 
 ```python
 _3r2r(target="cycles")
