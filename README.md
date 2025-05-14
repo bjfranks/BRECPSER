@@ -10,17 +10,25 @@ Other required Python libraries included: numpy, networkx, loguru, etc.
 
 ### Dataset Setup
 
-This will require the data from [BREC](https://github.com/GraphPKU/BREC/tree/Release/customize/Data/raw) placed into Data/raw
+Start by setting up the dataset. This will require the data from [BREC](https://github.com/GraphPKU/BREC/tree/Release/customize/Data/raw) placed into Data/raw. Run:
 
 ```bash
 python dataset_v4.py
 ```
 
+Which will create the files brec_3r2r.graphml, brec_CCoHG.graphml, and brec_v3.npy in Data/processed that need to be moved back into Data/raw.
+
 ### Evaluate Model
 
+To evaluate a model on some BREC part run 
+
 ```bash
-python test_BREC.py
+python test_BREC.py --part <part> --name_tag test
 ```
+
+with <part> replaced by one of Basic, Regular, Extension, CFI, 4-Vertex_Condition, Distance_Regular, CCoHG, or 3r2r.
+
+Finally, you can use evaluation.ipynb to collect your results and print them.
 
 ## Standard Datasets
 
@@ -38,4 +46,4 @@ _3r2r(target="None")
 
 ## Graph Creation
 
-Data/raw/*.graphml already contains the precreated datasets for reproducibility. However, if you wish to recreate of modify them, then the CCoHG_3r2r_generation.ipynb provides all the code to do so.
+Data/raw/*.graphml already contains the precreated datasets for reproducibility. However, if you wish to recreate or modify them, then the CCoHG_3r2r_generation.ipynb provides all the code to do so.
