@@ -8,6 +8,15 @@ Tested combination: Python 3.11.5 + PyTorch 2.5.1 + PyTorch_Geometric 2.6.1
 
 Other required Python libraries included: numpy, networkx, loguru, etc.
 
+Assuming a compatible python version you can install the packages as follows:
+
+```bash
+python -m pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu118
+python -m pip install torch_geometric
+python -m pip install pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-2.5.0+cu118.html
+python -m pip install numpy jupyter notebook networkx loguru tqdm
+```
+
 ### Dataset Setup
 
 Start by setting up the dataset. This will require the data from [BREC](https://github.com/GraphPKU/BREC/tree/Release/customize/Data/raw) placed into Data/raw. Run:
