@@ -32,10 +32,10 @@ Which will create the files brec_3r2r.graphml, brec_CCoHG.graphml, and brec_v3.n
 To evaluate a model on some BREC part run 
 
 ```bash
-python test_BREC.py --part <part> --name_tag test
+python test_BREC.py --part part --name_tag test
 ```
 
-with <part> replaced by one of Basic, Regular, Extension, CFI, 4-Vertex_Condition, Distance_Regular, CCoHG, or 3r2r.
+with part replaced by one of Basic, Regular, Extension, CFI, 4-Vertex_Condition, Distance_Regular, CCoHG, or 3r2r.
 
 Finally, you can use evaluation.ipynb to collect your results and print them.
 
